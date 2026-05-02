@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
         - name: springboot-crud-k8s
-          image: springboot-crud-k8s:1.0
+          image: vamshivoore/springboot-crud-k8s:v2
+          imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 8080
           env:   # Setting Enviornmental Variables

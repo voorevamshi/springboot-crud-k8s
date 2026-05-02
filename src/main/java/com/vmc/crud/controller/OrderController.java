@@ -16,16 +16,19 @@ public class OrderController {
 
     @PostMapping
     public Order addOrder(@RequestBody Order order){
+        System.out.println("Entered addOrder order:"+order);
         return service.addOrder(order);
     }
 
     @GetMapping
     public List<Order> getOrders(){
+        System.out.println("Entered getOrders");
         return service.getOrders();
     }
 
     @GetMapping("/{id}")
     public Order getOrderById(@PathVariable int id){
+        System.out.println("Entered getOrderById id:"+id);
         return service.getOrderById(id);
     }
 }
